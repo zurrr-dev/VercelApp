@@ -49,7 +49,7 @@ header {
 }
 
 .navbar a:hover {
-    color: #FF0000;
+    color: #9A0202;
 }
 
 .home {
@@ -103,10 +103,10 @@ header {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #FF0000;
+    border: 2px solid #9A0202;
     border-radius: 50%;
     font-size: 20px;
-    color: #FF0000;
+    color: #9A0202;
     text-decoration: none;
     transition: .5s ease;
     opacity: 0;
@@ -115,14 +115,14 @@ header {
     margin: 30px 15px 30px 0;
 }
 .home-sci a:hover{
-    background: #FF0000;
+    background: #9A0202;
     color: #081b29;
-    box-shadow: 0 0 20px #FF0000;
+    box-shadow: 0 0 20px #9A0202;
 }
 .btn-box{
     display: inline-block;
     padding: 12px 28px;
-    background: #FF0000;
+    background: #9A0202;
     border-radius: 40px;
     font-size: 16px;
     color: #081b29;
@@ -132,13 +132,13 @@ header {
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
-    box-shadow: 0 0 5px #FF0000,
-    0 0 25px #FF0000;
+    box-shadow: 0 0 5px #9A0202,
+    0 0 25px #9A0202;
 }
 .btn-box:hover{
-    box-shadow: 0 0 5px #FF0000cyan,
-    0 0 25px #FF0000cyan, 0 0 50px #FF0000cyan,
-    0 0 100px #FF0000cyan, 0 0 200px #FF0000cyan;
+    box-shadow: 0 0 5px #9A0202cyan,
+    0 0 25px #9A0202cyan, 0 0 50px #9A0202cyan,
+    0 0 100px #9A0202cyan, 0 0 200px #9A0202cyan;
 
 }
 
@@ -160,7 +160,7 @@ header {
 
 }
 .about-text h2 span{
-    color: #FF0000;
+    color: #9A0202;
 }
 .about-text h4{
     font-size: 20px;
@@ -187,7 +187,7 @@ header {
     padding-bottom: 70px;
 }
 .sub-title span{
-    color: #FF0000;
+    color: #9A0202;
 }
 .container{
     padding: 90px;
@@ -230,7 +230,7 @@ header {
 .read {
     display: inline-block;
     padding: 12px 28px;
-    background: #FF0000;
+    background: #9A0202;
     border-radius: 40px;
     font-size: 16px;
     color: #081b29;
@@ -240,13 +240,13 @@ header {
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
-    box-shadow: 0 0 5px #FF0000,
-    0 0 25px #FF0000;
+    box-shadow: 0 0 5px #9A0202,
+    0 0 25px #9A0202;
 }
 .read:hover {
-    box-shadow: 0 0 5px #FF0000cyan,
-    0 0 25px #FF0000cyan, 0 0 50px #FF0000cyan,
-    0 0 100px #FF0000cyan, 0 0 200px #FF0000cyan
+    box-shadow: 0 0 5px #9A0202cyan,
+    0 0 25px #9A0202cyan, 0 0 50px #9A0202cyan,
+    0 0 100px #9A0202cyan, 0 0 200px #9A0202cyan
 }
 
 .services-list div:hover{
@@ -311,7 +311,7 @@ section{
 
 .Technical-bars .bar .progress-line span {
     height: 100%;
-    background-color: #FF0000;
+    background-color: #9A0202;
     position: absolute;
     border-radius: 10px;
     animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
@@ -431,7 +431,7 @@ section{
 }
 .path {
     stroke-width: 10;
-    stroke: #FF0000;
+    stroke: #9A0202;
     fill: transparent;
     stroke-dasharray: 502;
     stroke-dashoffset: 502;
@@ -549,7 +549,7 @@ section{
     padding-bottom: 50px;
 }
 .main-text h2 span{
-    color: #FF0000;
+    color: #9A0202;
 }
 
 .portfolio-content {
@@ -583,7 +583,7 @@ section{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba( 0,0,0,0.1),#FF0000);
+    background: linear-gradient(rgba( 0,0,0,0.1),#9A0202);
     position: absolute;
     border-radius: 8px;
     left: 0;
@@ -648,7 +648,7 @@ section{
 
 }
 .contact-text h2 span{
-    color: #FF0000;
+    color: #9A0202;
 }
 .contact-text h4{
     margin: 15px 0;
@@ -676,7 +676,7 @@ section{
 }
 .contact-list i{
     display: inline-block;
-    color: #FF0000;
+    color: #9A0202;
     font-size: 20px;
     font-weight: 600;
     transition: all .40s ease;
@@ -684,7 +684,7 @@ section{
 }
 .contact-list li a:hover{
     transform: scale(1.01) translateY(-5px);
-    color: #FF0000;
+    color: #9A0202;
 }
 .contact-icons i{
     display: inline-flex;
@@ -693,10 +693,10 @@ section{
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #FF0000;
+    border: 2px solid #9A0202;
     border-radius: 50%;
     font-size: 20px;
-    color: #FF0000;
+    color: #9A0202;
     text-decoration: none;
     margin: 30px 15px 30px 0;
     transition: .5s ease;
@@ -705,9 +705,9 @@ section{
     animation-delay: calc(.2s * var(--i));
 }
 .contact-icons i:hover{
-    background: #FF0000;
+    background: #9A0202;
     color: #000;
-    box-shadow: 0 0 20px #FF0000;
+    box-shadow: 0 0 20px #9A0202;
 }
 .contact-form form{
     position: relative;
@@ -734,7 +734,7 @@ section{
 .contact-form form .send{
     display: inline-block;
     padding: 14px 60px;
-    background: #FF0000;
+    background: #9A0202;
     border-radius: 40px;
     font-size: 16px;
     color: #081b29;
@@ -744,13 +744,13 @@ section{
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
-    box-shadow: 0 0 5px #FF0000,
-    0 0 25px #FF0000;
+    box-shadow: 0 0 5px #9A0202,
+    0 0 25px #9A0202;
 }
 .contact-form form .send:hover {
-    box-shadow: 0 0 5px #FF0000cyan,
-    0 0 25px #FF0000cyan, 0 0 50px #FF0000cyan,
-    0 0 100px #FF0000cyan, 0 0 200px #FF0000cyan;
+    box-shadow: 0 0 5px #9A0202cyan,
+    0 0 25px #9A0202cyan, 0 0 50px #9A0202cyan,
+    0 0 100px #9A0202cyan, 0 0 200px #9A0202cyan;
 }
 @media (max-width: 768px) {
     .contact {
@@ -782,7 +782,7 @@ section{
 }
 .top i{
     color: #000;
-    background: #FF0000;
+    background: #9A0202;
     padding: 10px;
     border-radius: 0.5rem;
 }
