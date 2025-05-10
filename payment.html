@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Payment CoganHosting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: url('https://img1.pixhost.to/images/5655/597090536_skyvien.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+      padding: 50px 20px;
+      position: relative;
+    }
+
+    canvas#particles, canvas#snow {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .shine {
+      position: absolute;
+      top: -100%;
+      left: -100%;
+      width: 300%;
+      height: 300%;
+      background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+      transform: rotate(45deg);
+      animation: shine 4s infinite linear;
+      z-index: 0;
+    }
+
+    @keyframes shine {
+      0% { transform: translate(-100%, -100%) rotate(45deg); }
+      100% { transform: translate(100%, 100%) rotate(45deg); }
+    }
+
+    .welcome-message {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      z-index: 9999;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #cbd5e1;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .qr img {
+      width: 220px;
+      border-radius: 12px;
+      margin: 30px auto;
+      transition: transform 0.3s ease;
+    }
+
+    .qr:hover img { transform: scale(1.08); }
+
+    .collapsible-container {
+      max-width: 500px;
+      margin: 30px auto;
+      background-color: rgba(30, 41, 59, 0.8);
+      border-radius: 15px;
+      padding: 20px;
+    }
+
+    .collapsible {
+      background: linear-gradient(45deg, #7A94FF, #C61616, #FF1B00);
+      background-size: 200% 200%;
+      animation: gradientBtn 3s ease infinite;
+      color: white;
+      cursor: pointer;
+      padding: 14px;
+      width: 100%;
+      border: none;
+      font-size: 1.1em;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      color: #cbd5e1;
+      border-radius: 10px;
+      margin-top: 5px;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      gap: 12px;
+    }
+
+    .btn-link {
+      padding: 14px 24px;
+      background: linear-gradient(45deg, #FFFFFF, #BE2020, #FF1B00);
+      background-size: 200% 200%;
+      animation: gradientBtn 4s ease infinite;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-link:hover { transform: scale(1.08); }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes gradientBtn {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="shine"></div>
+
+<!-- Welcome Animation -->
+<div id="welcome-message" class="welcome-message">
+  <h1>Hello Sirr I`am AlwaysZuroku</h1>
+  <p>Welcome To Payment</p>
+ <p>Wajib Kirim Bukti Setelah TF Ke Nomor Whatsapp Di Bawah</p>
+  <button id="payment" class="btn-link">Payment</button>
+</div>
+
+<audio id="clickSound" src="https://n.uguu.se/UtpfwFMU.mp3"></audio>
+
+<!-- Konten Utama -->
+<div id="main-content" style="display: none;">
+  <h1>Payment AlwaysZuroku</h1>
+  <p>Select To Payment</p>
+
+             <div class="qris" onclick="zoomQR()">
+    <img src="https://files.catbox.moe/26o9em.jpg" alt="Qris Zuroku" />
+  </div>
+
+        <p class="subtitle">Scan Code To Transaksion</p>
+
+         <div class="collapsible-container">
+    <button class="collapsible">▶ E-WALLET</button>
+    <div class="content">
+      <p>DANA: 088226430276</p>
+      <p>A/N: SU****O</p>
+    </div>
+
+    <button class="collapsible">▶ BANK</button>
+    <div class="content">
+      <p>BCA: ERR</p>
+    </div>
+  </div>
+
+<div class="btn-group">
+  <a href="https://wa.me/6285727198100" class="btn-link" target="_blank">WhatsApp</a>
+  <a href="https://t.me/xinzzAja" class="btn-link" target="_blank">Telegram</a>
+   <a href="www.youtube.com/@AlwaysZuroku" class="btn-link" target="_blank">YouTube</a>
+  <a href="index.html" class="btn-link">Back Dashboards</a>
+  <a href="info.html" class="btn-link">Back Info</a>
+</div>
+
+</div>
+ <div class="overlay" id="qrOverlay" onclick="closeZoom()">
+       
+
+<canvas id="particles"></canvas>
+<canvas id="snow"></canvas>
+
+<script>
+  // Welcome transition
+  document.getElementById('go-to-payment').addEventListener('click', function () {
+    document.getElementById('welcome-message').style.display = 'none';
+    document.getElementById('main-content').style.display = 'block';
+  });
+
+  document.querySelectorAll(".collapsible").forEach(btn => {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+      content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+    });
+  });
+
+  // Partikel warna-warni
+  const canvas = document.getElementById("particles");
+  const ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const particles = [];
+  for (let i = 0; i < 80; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 2 + 1,
+      color: `hsl(${Math.random() * 360}, 100%, 60%)`,
+      speedX: Math.random() * 0.5 - 0.25,
+      speedY: Math.random() * 0.5 - 0.25,
+    });
+  }
+  function drawParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      ctx.fillStyle = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+      p.x += p.speedX;
+      p.y += p.speedY;
+      if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+    });
+    requestAnimationFrame(drawParticles);
+  }
+  drawParticles();
+
+  // Efek salju
+  const snowCanvas = document.getElementById("snow");
+  const snowCtx = snowCanvas.getContext("2d");
+  snowCanvas.width = window.innerWidth;
+  snowCanvas.height = window.innerHeight;
+  const snowflakes = [];
+  for (let i = 0; i < 100; i++) {
+    snowflakes.push({
+      x: Math.random() * snowCanvas.width,
+      y: Math.random() * snowCanvas.height,
+      radius: Math.random() * 3 + 3,
+      speedY: Math.random() * 1 + 2,
+      speedX: Math.random() * 0.5 - 0.50
+    });
+  }
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            const about = document.getElementById('about');
+            setTimeout(() => {
+                loader.classList.add('hidden');
+                setTimeout(() => {
+                    about.classList.add('active');
+                }, 200);
+            }, 2500);
+        });
+
+        function showPayment() {
+            const about = document.getElementById('about');
+            const payment = document.getElementById('payment');
+            about.classList.remove('active');
+            about.classList.add('hidden');
+            setTimeout(() => {
+                payment.classList.remove('hidden');
+                payment.classList.add('active');
+            }, 900);
+        }
+
+        function showAbout() {
+            const payment = document.getElementById('payment');
+            const about = document.getElementById('about');
+            payment.classList.remove('active');
+            payment.classList.add('hidden');
+            setTimeout(() => {
+                about.classList.remove('hidden');
+                about.classList.add('active');
+            }, 900);
+        }
+  function drawSnow() {
+    snowCtx.clearRect(0, 0, snowCanvas.width, snowCanvas.height);
+    snowCtx.fillStyle = "rgba(255, 255, 255, 0.8)";
+    snowflakes.forEach(flake => {
+      snowCtx.beginPath();
+      snowCtx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+      snowCtx.fill();
+      flake.y += flake.speedY;
+      flake.x += flake.speedX;
+      if (flake.y > snowCanvas.height) {
+        flake.y = -flake.radius;
+        flake.x = Math.random() * snowCanvas.width;
+      }
+    });
+    requestAnimationFrame(drawSnow);
+  }
+  drawSnow();
+</script>
+
+</body>
+</html>
