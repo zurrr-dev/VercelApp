@@ -1,5 +1,5 @@
 var typed = new Typed(".text", {
-    strings: ["Andai Kau Tau","Titik TerRendah","Dari Seorang","Laki-Laki","Adalah Ketika","Dia Tidak Tahu","Bagaimana Cara","Untuk Membahagiakan","Kedua Orang Tuanya","Dan Juga Pasangan nya."],
+    strings: ["Terjerumus","Kedalam Dunia Malam","Adalah Hal Yang","Paling Ku Sesali","Selama Hidupku","Menjadi Anak Nakal","Bukanlah Keinginanku","Ketenangan","Di Dalam Dunia Itu","Yang Membuatku","Sangan Nyaman","Berada Di Dalamnya"],
     typeSpeed: 100,
     backSpeed: 50,
     backDelay: 70,
