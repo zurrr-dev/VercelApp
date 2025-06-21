@@ -1,9 +1,0 @@
-{
-  "Filename": "SenaCrash.js",
-  "Access": [
-    "6289651612071"
-  ],
-  "Access_Bot": [
-  "6289505975876",
-  ]
-}
